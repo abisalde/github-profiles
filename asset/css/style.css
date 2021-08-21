@@ -1,0 +1,104 @@
+@import url('navigation.css');
+@import url('responsive.css');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+        sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+:root {
+    --color-header-text: #fffff1;
+    --color-header-bg: #24292e;
+    --color-header-links: #fff;
+    --color-header-serach-border: #444d56;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    background-color: initial;
+}
+
+.wrapper {
+    width: 100vw;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header,
+section,
+nav,
+article,
+main {
+    display: block;
+}
+
+.fab,
+.fas,
+.fal {
+    color: var(--color-header-text);
+}
+
+header {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    position: relative;
+    background-color: var(--color-header-bg);
+}
+
+.main-menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0rem;
+}
+
+.main-nav-links {
+    color: var(--color-header-links);
+    font-weight: 600;
+    padding-right: 0.75rem;
+    font-size: 0.8rem;
+}
+
+span.display-992 {
+    padding-left: 0.3rem;
+}
+
+input[type='text']:focus {
+    margin-right: 4rem;
+    padding-right: 2rem;
+}
+
+input[type='text'] {
+    background: transparent;
+    color: var(--color-header-text);
+    border: none;
+    padding-left: 0.8rem;
+    transition: all 0.7s ease 0;
+    -moz-transition: all 0.7s ease 0;
+}
+
+label.form-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.6rem;
+    min-height: 1.6rem;
+    border-radius: ;
+}

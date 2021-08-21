@@ -1,0 +1,40 @@
+@media screen and (min-width: 90px) and (max-width: 691px) {
+}
+
+@media screen and (min-width: 692px) and (max-width: 991px) {
+}
+
+@media screen and (min-width: 692px) {
+    .logo-search-nav {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 5% 40% 50%;
+        grid-gap: 0.75rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .notification-create-profile {
+        display: grid;
+        grid-column-gap: 0.65rem;
+        grid-template-columns: 1.3rem 1.65rem 2.5rem;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 100px) {
+    .wrapper {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .wrapper {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        max-width: 1280px;
+    }
+}
