@@ -25,6 +25,11 @@ body {
     --color-border-primary: #e1e4e8;
     --color-border-active: #f9896c;
     --color-svg-breadcrumbs: #959da5;
+    --color-text-name: #586069;
+    --color-btn-bg: #fafbfc;
+    --color-btn-border: rgba(27, 31, 35, 0.15);
+    --color-btn-shadow: 0 1px 0 rgba(27, 31, 35, 0.04);
+    --color-btn-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 li {
@@ -34,6 +39,7 @@ li {
 a {
     text-decoration: none;
     background-color: initial;
+    cursor: pointer;
 }
 
 .wrapper {
@@ -48,6 +54,43 @@ nav,
 article,
 main {
     display: block;
+}
+
+.octicon {
+    fill: currentColor;
+    display: inline-block;
+    overflow: visible !important;
+    vertical-align: text-bottom;
+}
+
+img {
+    display: inline-block;
+    line-height: 1;
+    border-radius: 50%;
+    vertical-align: middle;
+    height: auto;
+    box-shadow: 0 0 0 1px transparent;
+    width: 100%;
+    border-style: none;
+}
+
+.btn {
+    background-color: var(--color-btn-bg);
+    border-color: var(--color-btn-border);
+    box-shadow: var(--color-btn-shadow), var(--color-btn-inset-shadow);
+    color: var(--color-btn-text);
+    transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    transition-property: color, background-color, border-color;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    appearance: none;
+    outline: none;
+    vertical-align: middle;
+}
+
+h1 {
+    font-weight: 600;
 }
 
 .fab,
@@ -159,7 +202,7 @@ input[type='text']:focus {
 }
 
 .profile-details .sort-down {
-    margin-top: -0.36rem;
+    margin-top: 0.17rem;
 }
 
 .bar {
@@ -178,4 +221,103 @@ input[type='text']:focus {
     z-index: 3;
     margin-top: 1.5rem;
     border-bottom: 0.06rem solid var(--color-border-primary);
+}
+
+.profile-card-repo-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-avatar-username {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.profile-avatar-username::after {
+    clear: both;
+    content: ' ';
+    display: table;
+}
+
+.avatar-status {
+    margin-right: 1rem;
+    position: relative;
+    z-index: 4;
+}
+
+.avatar-status img {
+    width: 260px;
+    height: 260px;
+    width: 100%;
+    height: auto;
+}
+
+.name-username {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.fullname,
+.username {
+    display: block;
+    line-height: 1.25;
+}
+
+.fullname {
+    font-size: 1.6rem;
+    color: var(--color-header-bg);
+    display: block;
+}
+
+.username {
+    font-size: 1.3rem;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--color-text-name);
+}
+
+.followers-following {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.followers,
+.following,
+.starred {
+    padding-right: 0.3rem;
+    padding-left: 0.3rem;
+    font-weight: 600;
+}
+
+.fal.fa-star {
+    padding-left: 0.3rem;
+}
+
+.followers-following a {
+    color: var(--color-text-name);
+    font-size: 0.95rem;
+    line-height: 1.25;
+}
+
+.link-follows:hover {
+    color: var(--color-focus-border);
+}
+
+.follow-aboutme-location {
+    width: 100%;
+    border-bottom: 0.06rem solid var(--color-border-primary);
+    display: flex;
+    flex-flow: column;
+}
+
+.btn.btn-follow {
+    width: 100%;
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    border-radius: 0.3rem;
+    border: 0.06rem solid var(--color-btn-border);
 }

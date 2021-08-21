@@ -9,6 +9,52 @@
     .hamburger {
         display: block;
     }
+
+    .avatar-status {
+        width: 20%;
+    }
+
+    .name-username {
+        width: 100%;
+    }
+
+    .profile-card-repo-details {
+        flex-flow: column nowrap;
+    }
+
+    .profile-avatar-username {
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    .profile-card-content {
+        width: 100%;
+    }
+
+    .breadcrumbs-repository-details {
+        width: 100%;
+    }
+
+    .aboutme-desc p {
+        font-size: 1rem;
+    }
+
+    .follow-aboutme-location {
+        padding-bottom: 1rem;
+    }
+
+    .aboutme-desc {
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
+
+    .followers-following {
+        margin-top: 0.5rem;
+    }
+
+    .button-follow {
+        order: 1;
+    }
 }
 
 @media screen and (min-width: 692px) and (max-width: 911px) {
@@ -39,12 +85,37 @@
     .notification {
         padding-top: 0.4rem;
     }
+
+    .profile-card-repo-details {
+        flex-flow: row nowrap;
+    }
+
+    .profile-avatar-username {
+        flex-flow: column nowrap;
+    }
+
+    .profile-card-content {
+        width: 22.5%;
+    }
+
+    .breadcrumbs-repository-details {
+        width: 75.5%;
+    }
+
+    .button-follow,
+    .aboutme-desc {
+        margin-bottom: 1rem;
+    }
+
+    .aboutme-desc p {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (min-width: 100px) {
     .wrapper {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
     }
 }
 
