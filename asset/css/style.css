@@ -30,6 +30,8 @@ body {
     --color-btn-border: rgba(27, 31, 35, 0.15);
     --color-btn-shadow: 0 1px 0 rgba(27, 31, 35, 0.04);
     --color-btn-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    --color-text-tertiary: #6a737d;
+    --color-focus-shadow-border: 0 0 0 3px rgba(3, 102, 214, 0.3);
 }
 
 li {
@@ -52,7 +54,9 @@ header,
 section,
 nav,
 article,
-main {
+main,
+button,
+form {
     display: block;
 }
 
@@ -126,6 +130,10 @@ span.display-992 {
     padding-left: 0.3rem;
 }
 
+form {
+    width: 100%;
+}
+
 label.form-group {
     position: relative;
     display: flex;
@@ -165,6 +173,8 @@ input::placeholder {
 
 label.form-group:focus {
     border: 0.06rem solid var(--color-focus-border) !important;
+    border-radius: 0rem 0.4rem 0.4rem 0rem !important;
+    box-shadow: var(--color-focus-shadow-border);
 }
 
 input[type='text']:focus {
@@ -172,7 +182,8 @@ input[type='text']:focus {
     background-color: var(--color-header-links);
     color: var(--color-header-bg);
     border: 0.06rem solid var(--color-focus-border) !important;
-    border-radius: 0rem 0.08rem 0.08rem 0rem !important;
+    box-shadow: var(--color-focus-shadow-border);
+    border-radius: 0.3rem 0.3rem 0rem 0rem !important;
 }
 
 .search-bar {
@@ -203,6 +214,13 @@ input[type='text']:focus {
 
 .profile-details .sort-down {
     margin-top: 0.17rem;
+}
+
+.profile-details img {
+    max-width: 1.5rem;
+    height: 1.5rem;
+    height: auto;
+    width: 100%;
 }
 
 .bar {
@@ -301,7 +319,12 @@ input[type='text']:focus {
     line-height: 1.25;
 }
 
-.link-follows:hover {
+.link-follows i {
+    color: var(--color-text-tertiary);
+}
+
+.link-follows:hover,
+.link-follows i:hover {
     color: var(--color-focus-border);
 }
 
@@ -320,4 +343,90 @@ input[type='text']:focus {
     line-height: 1.25rem;
     border-radius: 0.3rem;
     border: 0.06rem solid var(--color-btn-border);
+}
+
+.location-twitter {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    font-size: 0.9rem;
+    color: var(--color-header-bg);
+    line-height: 1.5;
+    padding-bottom: 1rem;
+}
+
+.location-twitter p {
+    display: inline-block;
+    vertical-align: top;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-top: 0.3rem;
+}
+
+.location-twitter p svg,
+.location-twitter p i {
+    color: var(--color-text-tertiary);
+    width: 1rem;
+}
+
+.form-repo-search {
+    padding: 1rem 0;
+    border-bottom: 0.03rem solid var(--color-border-primary);
+    width: 100%;
+}
+
+div.form-group input[type='text'] {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 1.7rem;
+    line-height: 1.3rem;
+    padding: 0.3rem 0.8rem;
+    color: var(--color-header-links);
+    font-weight: 400;
+    vertical-align: middle;
+    width: 100%;
+    border: 0.06rem solid var(--color-border-primary);
+    border-radius: 0.4rem;
+    outline: none;
+    color: var(--color-header-bg);
+}
+
+div.form-group input[type='text']:focus {
+    box-shadow: var(--color-focus-shadow-border);
+    border-radius: 0.4rem !important;
+    border: 0.06rem solid var(--color-border-primary);
+}
+
+div.form-group input::placeholder {
+    color: var(--color-text-name);
+}
+
+.sort-search {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+}
+
+.sort-search button {
+    margin-right: 0.3rem;
+    margin-top: 0.3rem;
+}
+
+.btn.btn-type,
+.btn.btn-language,
+.btn.btn-sort {
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    border-radius: 0.3rem;
+    border: 0.06rem solid var(--color-btn-border);
+}
+
+.btn.btn-type .sort-down,
+.btn.btn-language .sort-down,
+.btn.btn-sort .sort-down {
+    margin-left: 0.3rem;
 }
