@@ -88,10 +88,6 @@
         align-items: center;
     }
 
-    .notification {
-        padding-top: 0.4rem;
-    }
-
     .profile-card-repo-details {
         flex-flow: row nowrap;
     }
