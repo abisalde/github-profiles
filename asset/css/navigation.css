@@ -30,7 +30,7 @@ ul.header-navigation {
 .breadcrumbs-nav-links {
     display: flex;
     align-items: center;
-    padding: 0.512rem 1.125rem;
+    padding: 0.5rem 1rem;
     line-height: 1.875rem;
     color: var(--color-header-bg);
     text-align: center;
@@ -48,4 +48,8 @@ ul.header-navigation {
     fill: var(--color-svg-breadcrumbs);
     vertical-align: text-bottom;
     font-size: 0.8rem;
+}
+
+.breadcrumbs-menu.active {
+    fill: var(--color-header-bg);
 }

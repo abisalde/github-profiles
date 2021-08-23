@@ -31,6 +31,7 @@
         position: relative;
         top: 0;
         width: 100%;
+        margin-bottom: 1.5rem;
     }
 
     .breadcrumbs-repository-details {
@@ -59,6 +60,27 @@
     }
 
     .location-twitter {
+        display: none;
+    }
+
+    .breadcrumbs-sticky-nav.desktop {
+        display: none;
+    }
+
+    .breadcrumbs-sticky-nav.mobile {
+        margin-top: 0rem;
+    }
+
+    .sticky-profile-card {
+        display: none;
+    }
+
+    nav.breadcrumbs-inline-navigation {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .breadcrumbs-menu {
         display: none;
     }
 }
@@ -112,6 +134,10 @@
 
     .aboutme-desc p {
         font-size: 1rem;
+    }
+
+    .breadcrumbs-sticky-nav.mobile {
+        display: none;
     }
 }
 
